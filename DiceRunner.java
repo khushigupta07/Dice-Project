@@ -25,12 +25,12 @@ public class DiceRunner{
 
 		//Test 2
 		DiceHolder container = new DiceHolder();
-		for(int i=0;i<6;i++){
+		for(int i=0;i<5;i++){
 			Die a = new Die();
 			a.setSides((int)(Math.random()*20)+1);
 			a.roll();
-			System.out.println(a);
 			container.addDie(a);
+			System.out.println(container+"\n");
 		}
 
 		container.shake();
