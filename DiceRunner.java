@@ -22,5 +22,18 @@ public class DiceRunner{
 		}
 
 		System.out.println("\nIt took "+(count1+count2)+" total rolls to get snake eyes.\n");
+
+		//Test 2
+		DiceHolder container = new DiceHolder();
+		for(int i=0;i<6;i++){
+			Die a = new Die();
+			a.setSides((int)(Math.random()*20)+1);
+			a.roll();
+			System.out.println(a);
+			container.addDie(a);
+		}
+
+		container.shake();
+		System.out.println("After shaking: \n"+container);
 	}
 }
